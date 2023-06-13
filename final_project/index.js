@@ -15,7 +15,7 @@ app.use("/customer/auth/*", function auth(req,res,next){
     const token = authHeeader && authHeeader.split(' ')[1];
 
     if(!token){
-        return res.status(401).jason({ message: 'Acess token not found'});
+        return res.status(401).json({ message: 'Acess token not found'});
     }
 
     try{
