@@ -11,9 +11,8 @@ public_users.post("/register", (req,res) => {
 });
 
 // Get the book list available in the shop
-public_users.get('/',function (req, res) {
-  const bookList = Object.values(books);
-  return res.status(200).json({ books: bookList });
+public_users.get('/',function (req, res)  {
+  res.send(JSON.stringify(books));
   
 });
 
